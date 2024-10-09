@@ -1,70 +1,87 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .container {
-    height: 100vh;
-    width: 100vw;
-    /* background-color: aquamarine; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 100px;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text {
+  padding: 20px;
+  text-align: center;
+}
+
+.para {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+button {
+  height: 40px;
+  width: 100px;
+  background-color: black;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  margin-top: 20px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.icon a {
+  margin: 0 10px;
+}
+
+.icon img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
   .content {
-    height: 500px;
-    width: 1200px;
-    /* background-color: blue; */
-    display: flex;
+    flex-direction: row;
   }
-  .image {
-    height: 500px;
-    width: 400px;
-    /* background-color: azure; */
-    overflow: hidden;
+
+  .image, .text {
+    width: 50%;
   }
-  .image > img {
-    height: 100%;
-    width: auto;
-    display: block;
-  }
+
   .text {
-    height: 500px;
-    width: 800px;
-    /* background-color: green; */
+    text-align: left;
+    padding: 40px;
   }
-  .para {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    height: 400px;
-    width: 600px;
-    padding-top: 20px;
-    padding-left: 100px;
-    line-height: 20px;
-    letter-spacing: 0.5px;
-  }
-  button {
-    height: 40px;
-    width: 100px;
-    background-color: black;
-    border-radius: 20px;
-    border: none;
-    color: white;
-    margin-top: 40px;
-  }
+
   .icon {
-    height: 100px;
-    width: 800px;
-    /* background-color: greenyellow; */
-    padding-left: 100px;
-    display: flex;
+    justify-content: flex-start;
   }
-  .icon > a > img {
-    height: 50px;
-    width: 50px;
-    /* background-color: black;
-        border: 2px solid red; */
-    border-radius: 50px;
-    margin-right: 60px;
-    margin-top: 20px;
-  }
+}
